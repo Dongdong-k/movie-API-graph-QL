@@ -1,4 +1,10 @@
+type dongdong {
+  name: String!
+  age: Int!
+  sex: String!
+}
+
 type Query {
   # 사용자가 name을 요청하면 String 타입 데이터를 보낸다는 의미
-  name: String!
+  person: dongdong!
 }
