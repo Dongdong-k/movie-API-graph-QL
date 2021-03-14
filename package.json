@@ -1,0 +1,31 @@
+{
+  "name": "moviewql",
+  "version": "1.0.0",
+  "description": "Movie API with graphQL",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon --exec babel-node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dongdong-k/movie-API-graph-QL.git"
+  },
+  "author": "dongdong",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dongdong-k/movie-API-graph-QL/issues"
+  },
+  "homepage": "https://github.com/Dongdong-k/movie-API-graph-QL#readme",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "global": "^4.4.0",
+    "graphql-yoga": "^1.18.3",
+    "yarn": "^1.22.10"
+  },
+  "devDependencies": {
+    "babel-node": "^0.0.1-security",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-3": "^6.24.1"
+  }
+}
