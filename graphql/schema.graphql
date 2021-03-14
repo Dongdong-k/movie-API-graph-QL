@@ -1,10 +1,13 @@
-type dongdong {
+type person {
+  id: Int!
   name: String!
   age: Int!
   sex: String!
 }
 
 type Query {
-  # 사용자가 name을 요청하면 String 타입 데이터를 보낸다는 의미
-  person: dongdong!
+  # 여러사람을 받을 수 있으므로 Array 설정
+  people: [person]!
+  #여러 사람 중 1명을 고를떄 ID를 통해서 선택 가능 & 없는 경우도 있으므로 ! 생략
+  person(id: Int!): person
 }
