@@ -1,10 +1,13 @@
-import { people, personGetById } from "./db";
+import { getMovies, getById, addMovie, deleteMovie } from "./db";
 
 const resolvers = {
   Query: {
-    people: () => people,
-    // id 할당받고 특정 id 해당하는 사람 정보 가져오는 함수 실행
-    person: (_, { id }) => personGetById(id),
+    movies: () => getMovies(),
+    movie: (_, { id }) => getById(id),
+  },
+  Mutation: {
+    addMovie: (_, { name, score }) => addMovie(name, score),
+    deleteMovie: (_, { id }) => deleteMovie(id),
   },
 };
 

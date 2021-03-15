@@ -1,13 +1,15 @@
-type person {
+type Movie {
   id: Int!
   name: String!
-  age: Int!
-  sex: String!
+  score: Int!
 }
 
 type Query {
-  # 여러사람을 받을 수 있으므로 Array 설정
-  people: [person]!
-  #여러 사람 중 1명을 고를떄 ID를 통해서 선택 가능 & 없는 경우도 있으므로 ! 생략
-  person(id: Int!): person
+  movies: [Movie]!
+  movie(id: Int!): Movie
+}
+
+type Mutation {
+  addMovie(name: String!, score: Int!): Movie!
+  deleteMovie(id: Int!): Boolean!
 }
