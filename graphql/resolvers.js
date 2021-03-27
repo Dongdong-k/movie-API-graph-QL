@@ -1,9 +1,10 @@
-import { getMovies } from "./db";
+import { getMovies, getMovie, getSuggestions } from "./db";
 
 const resolvers = {
   Query: {
-    // (_, {})에서 _는 variable name으로 그냥 적어주는 것
-    movies: (_, { limit, rating }) => getMovies(limit, rating),
+    movies: (_, { rating, limit }) => getMovies(limit, rating),
+    movie: (_, { id }) => getMovie(id),
+    suggestions: (_, { id }) => getSuggestions(id),
   },
 };
 

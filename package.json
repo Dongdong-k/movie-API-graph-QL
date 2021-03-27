@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/Dongdong-k/movie-API-graph-QL#readme",
   "dependencies": {
+    "axios": "^0.21.1",
     "babel-cli": "^6.26.0",
     "global": "^4.4.0",
     "graphql-yoga": "^1.18.3",
